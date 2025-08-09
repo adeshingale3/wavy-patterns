@@ -1,7 +1,7 @@
 import gsap from 'gsap';
 import React, { useEffect } from 'react'
  
-const RandomShape = () => {
+const FadingBG = () => {
   useEffect(() => {
     const tl = gsap.timeline({repeat: -1, repeatDelay: 0.6});
     tl.from(".box", {
@@ -46,4 +46,4 @@ tl.to(".box", {
     )
 }
 
-export default RandomShape
+export default FadingBG
