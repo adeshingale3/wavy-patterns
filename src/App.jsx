@@ -1,12 +1,12 @@
 import React from 'react'
-import FadingBG from './compnents/FadingBG'
-import NameScroller from './compnents/NameScroller'
+import AnimatedBG from './compnents/AnimatedBG'
 
 const App = () => {
   return (
     <div className='h-screen w-screen'>
       {/* <FadingBG /> */}
-      <NameScroller />
+      {/* <NameScroller /> */}
+      <AnimatedBG />
     </div>
   )
 }
