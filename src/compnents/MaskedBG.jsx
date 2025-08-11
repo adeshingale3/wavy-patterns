@@ -1,7 +1,7 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import React from 'react'
-import './index.css' // Ensure you have the correct styles imported
+import './MaskedBG.css' // Ensure you have the correct styles imported
 
 const MaskedBG = () => {
   useGSAP(() => {
