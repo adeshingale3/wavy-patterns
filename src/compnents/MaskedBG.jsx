@@ -1,6 +1,7 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import React from 'react'
+import './index.css' // Ensure you have the correct styles imported
 
 const MaskedBG = () => {
   useGSAP(() => {
@@ -105,7 +106,7 @@ const MaskedBG = () => {
     <div id="masked-bg-container" className='z-[-999] w-screen h-screen overflow-hidden relative'>
       <div className="relative w-full h-screen overflow-hidden">
         {/* Black background */}
-        <div className="absolute inset-0 bg-black" />
+        <div className="background absolute inset-0 bg-black" />
 
         {/* Circle masks */}
         <div id="circle1" className="absolute w-[300px] h-[300px] rounded-full"
@@ -148,21 +149,38 @@ const MaskedBG = () => {
             style={{  
                           
               WebkitMaskImage: `
-                radial-gradient(circle 400px at var(--circle1-x, 20%) var(--circle1-y, 40%), rgba(0, 0, 0, 1) 10%, transparent 100%),
-                radial-gradient(circle 250px at var(--circle3-x, 40%) var(--circle3-y, 95%), rgba(0,0,0,1) 10%, transparent 100%),
-                radial-gradient(circle 400px at var(--circle2-x, 70%) var(--circle2-y, 50%), rgba(0,0,0,1) 10%, transparent 100%),
-                radial-gradient(circle 250px at var(--circle4-x, 60%) var(--circle4-y, 80%), rgba(0,0,0,1) 10%, transparent 100%)
+                radial-gradient(
+  circle 400px at var(--circle1-x, 20%) var(--circle1-y, 40%),
+  rgba(75, 0, 130, 0.6) 0%,   /* Dark Indigo inside */
+  rgba(75, 0, 130, 0) 100%
+),
+radial-gradient(
+  circle 250px at var(--circle3-x, 40%) var(--circle3-y, 95%),
+  rgba(128, 0, 128, 0.6) 0%,  /* Dark Purple inside */
+  rgba(128, 0, 128, 0) 100%
+),
+radial-gradient(
+  circle 400px at var(--circle2-x, 70%) var(--circle2-y, 50%),
+  rgba(75, 0, 130, 0.6) 0%,   /* Dark Indigo inside */
+  rgba(75, 0, 130, 0) 100%
+),
+radial-gradient(
+  circle 250px at var(--circle4-x, 60%) var(--circle4-y, 80%),
+  rgba(128, 0, 128, 0.6) 0%,  /* Dark Purple inside */
+  rgba(128, 0, 128, 0) 100%
+)
+
               `,
               WebkitMaskRepeat: 'no-repeat',
-              maskComposite: 'source-in',
+              maskComposite: 'destination-out',
             }}
           >
-            {Array.from({ length: 12 }).map((_, i) => (
+            {Array.from({ length: 24 }).map((_, i) => (
               <div
                 key={i}
                 className="flex-1"
                 style={{
-                  backgroundColor: i % 2 === 0 ? '#34d399' : '#3b82f6'
+                  backgroundColor: '#3b82f6'
                 }}
               />
             ))}
