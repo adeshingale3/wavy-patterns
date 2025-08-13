@@ -48,25 +48,25 @@ const GithubBG = () => {
         }
     }, [boxCount]);
     const getRandomColor = () => {
-  const colors = [
-    "rgba(0, 0, 0, 0.5)", // empty
-  "rgba(155, 233, 168, 0.5)", // light
-  "rgba(64, 196, 99, 0.5)",   // medium
-  "rgba(48, 161, 78, 0.5)",   // dark
-  "rgba(33, 110, 57, 0.5)"  // yellow
-  ];
-  return colors[Math.floor(Math.random() * colors.length)];
-}
+        const colors = [
+            "rgba(0, 0, 0, 0.5)", // empty
+            "rgba(155, 233, 168, 0.5)", // light
+            "rgba(64, 196, 99, 0.5)",   // medium
+            "rgba(48, 161, 78, 0.5)",   // dark
+            "rgba(33, 110, 57, 0.5)"  // yellow
+        ];
+        return colors[Math.floor(Math.random() * colors.length)];
+    }
     return (
         <div className='fixed z-[-999] bg-black w-screen h-screen overflow-hidden'>
-            <div className='bg-radial from-black from-80% to-transperant absolute z-2 h-full w-full'/>
+            <div className='bg-radial from-black from-80% to-transperant absolute z-2 h-full w-full' />
             <div className='absolute z-1 h-full w-full grid grid-cols-[repeat(auto-fill,minmax(1rem,1fr))] gap-2 py-6 px-6 bottom-2'>
                 {Array.from({ length: boxCount }).map((_, i) => (
-                    <div key={i} style={{backgroundColor: getRandomColor()}}
+                    <div key={i} style={{ backgroundColor: getRandomColor() }}
                         ref={(el) => (boxRefs.current[i] = el)} className="box w-4 h-4 rounded-md" />
                 ))}
             </div>
-            
+
 
 
         </div>

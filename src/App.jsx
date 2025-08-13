@@ -1,6 +1,5 @@
 import React from 'react'
-import {MaskedBG} from 'wavyjs'
-import GithubBG from './compnents/GithubBG'
+import BlurBG from './compnents/BlurBG'
 
 
 const App = () => {
@@ -11,7 +10,10 @@ const App = () => {
       {/* <AnimatedBG /> */}
       {/* <MaskedBG /> */}
       {/* <MaskedBG /> */}
-      <GithubBG />
+      {/* <GithubBG /> */}
+     {/* <GithubBG /> */}
+     <div className='absolute'><BlurBG /></div>
+     <div className='absolute'><h1>hi</h1></div>
      
     </div>
   )
