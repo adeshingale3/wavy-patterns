@@ -1,5 +1,8 @@
 import React from 'react'
 import BlurBG from './compnents/BlurBG'
+import ToggleButton from './compnents/BookCallButton'
+import SlidingColorButton from './compnents/BookCallButton'
+import GradientBorderButton from './compnents/GradientBorderButton'
 
 
 const App = () => {
@@ -12,8 +15,8 @@ const App = () => {
       {/* <MaskedBG /> */}
       {/* <GithubBG /> */}
      {/* <GithubBG /> */}
-     <div className='absolute'><BlurBG /></div>
-     <div className='absolute'><h1>hi</h1></div>
+     {/* <SlidingColorButton /> */}
+     <GradientBorderButton />
      
     </div>
   )
