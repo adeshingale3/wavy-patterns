@@ -2,12 +2,14 @@ import React from 'react'
 import BlurBG from './compnents/BlurBG'
 import ToggleButton from './compnents/BookCallButton'
 import SlidingColorButton from './compnents/BookCallButton'
-import GradientBorderButton from './compnents/GradientBorderButton'
+import FadingBG from './compnents/FadingBG'
+import ReactLogoGlowGSAP from './compnents/Icons/ReactIcon'
+import ReactLogoGlow from './compnents/Icons/ReactIcon'
 
 
 const App = () => {
   return (
-    <div className='h-screen w-screen flex items-center justify-center text-9xl'>
+    <div className='h-screen w-screen flex items-center justify-center bg-black'>
       {/* <FadingBG /> */}
       {/* <NameScroller /> */}
       {/* <AnimatedBG /> */}
@@ -16,7 +18,9 @@ const App = () => {
       {/* <GithubBG /> */}
      {/* <GithubBG /> */}
      {/* <SlidingColorButton /> */}
-     <GradientBorderButton />
+     {/* <GradientBorderButton /> */}
+     <ReactLogoGlow />
+    
      
     </div>
   )

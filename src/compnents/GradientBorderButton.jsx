@@ -17,7 +17,7 @@ const GradientBorderButton = () => {
     <div className='rotater absolute left-[-50%] top-[-50%] h-[200%] w-[200%] bg-[conic-gradient(rgba(244,114,182,0.4)_0deg,rgba(192,132,252,0.4)_120deg,transparent_80deg)]' />
 
     <div className="card-content flex items-center justify-center text-xs absolute left-[2px] top-[2px] h-[calc(100%-4px)] w-[calc(100%-4px)] rounded-lg bg-gradient-to-b from-slate-800 to-slate-900">
-        <h1 className='text-lg'>hwllo</h1>
+        <h1 className='text-lg'>Hello</h1>
     </div>
 </div>
         </div>
