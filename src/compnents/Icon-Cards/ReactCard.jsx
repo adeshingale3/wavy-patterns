@@ -1,13 +1,24 @@
-
-import { motion } from "framer-motion";
 import React from "react";
+import { motion } from "framer-motion";
 
-
-const ReactIcon = () => {
-  
-
+const ReactCard = () => {
   return (
-    <svg
+    <motion.div
+      className="relative"
+      animate={{ rotateY: 360 }}
+      transition={{
+        duration: 6,
+        repeat: Infinity,
+        ease: "linear"
+      }}
+    >
+      <div className="relative w-24 h-32 rounded-2xl backdrop-blur-md bg-cyan-900/50 border border-cyan-400/60 shadow-2xl transform -translate-x-4 -translate-y-2 z-10">
+        {/* Card border glow */}
+        <div className="absolute inset-0 rounded-2xl border border-cyan-400/90 shadow-[0_0_25px_rgba(34,211,238,0.4)]"></div>
+
+        {/* Card content */}
+        <div className="relative h-full flex items-center justify-center">
+            <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 841.9 595.3"
       width="200"
@@ -100,9 +111,12 @@ const ReactIcon = () => {
         </filter>
       </defs>
     </svg>
+        </div>
+      </div>
 
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent rounded-full blur-4xl scale-200"></div>
+    </motion.div>
   );
 };
 
-export default ReactIcon;
-
+export default ReactCard;

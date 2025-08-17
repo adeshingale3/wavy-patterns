@@ -5,6 +5,7 @@ import SlidingColorButton from './compnents/BookCallButton'
 import FadingBG from './compnents/FadingBG'
 import ReactLogoGlowGSAP from './compnents/Icons/ReactIcon'
 import ReactLogoGlow from './compnents/Icons/ReactIcon'
+import ReactCard from './compnents/Icon-Cards/ReactCard'
 
 
 const App = () => {
@@ -19,7 +20,8 @@ const App = () => {
      {/* <GithubBG /> */}
      {/* <SlidingColorButton /> */}
      {/* <GradientBorderButton /> */}
-     <ReactLogoGlow />
+     {/* <ReactLogoGlow /> */}
+     <ReactCard />
     
      
     </div>

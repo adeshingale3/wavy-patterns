@@ -3,46 +3,44 @@ import { motion } from "framer-motion";
 import React from "react";
 
 
-const ReactIcon = () => {
+const JavascriptLogoGlow = () => {
   
 
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 841.9 595.3"
+      viewBox="0 0 630 630"
       width="200"
       height="200"
-      fill="none"
-      className="svg"
+      className="js-svg"
+      overflow="visible"
     >
-      {/* Base React logo (3 ellipses) with softer glow */}
-      <g
-        stroke="cyan"
-        strokeWidth="20"
-        opacity="0.5"
+      {/* Base JS square with soft glow */}
+      <rect
+        width="630"
+        height="630"
+        fill="#f7df1e"
         filter="url(#glowSoft)"
-      >
-        <ellipse cx="420.9" cy="296.5" rx="300" ry="120" />
-        <ellipse
-          cx="420.9"
-          cy="296.5"
-          rx="300"
-          ry="120"
-          transform="rotate(60 420.9 296.5)"
-        />
-        <ellipse
-          cx="420.9"
-          cy="296.5"
-          rx="300"
-          ry="120"
-          transform="rotate(120 420.9 296.5)"
-        />
-      </g>
+        rx="30"
+      />
 
-      {/* Glowing moving circle (kept strong) */}
+      {/* Letters JS */}
+      <text
+        x="50%"
+        y="60%"
+        textAnchor="middle"
+        fontSize="280"
+        fontWeight="bold"
+        fill="black"
+        fontFamily="Arial, sans-serif"
+      >
+        JS
+      </text>
+
+      {/* Glowing moving circle (now on the border) */}
       <motion.circle
-        r="14"
-        fill="cyan"
+        r="18"
+        fill="#f7df1e"
         filter="url(#circleGlow)"
         animate={{ scale: [1, 1.2, 1] }}
         transition={{
@@ -51,26 +49,27 @@ const ReactIcon = () => {
           ease: "easeInOut",
         }}
       >
+        {/* Path hugs the outer border */}
         <animateMotion
-          dur="5s"
+          dur="6s"
           repeatCount="indefinite"
           rotate="auto"
-          path="M 120,296.5 A 300,120 0 1,1 721,296.5 A 300,120 0 1,1 120,296.5 Z"
+          path="M 0,0 H 630 V 630 H 0 Z"
         />
       </motion.circle>
 
       {/* Glow filters */}
       <defs>
-        {/* Softer glow for ellipses */}
+        {/* Softer glow for square */}
         <filter id="glowSoft" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" />
+          <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
           <feColorMatrix
             in="blur"
             type="matrix"
-            values="0 0 0 0  0
-                    0 0 0 0  1
-                    0 0 0 0  1
-                    0 0 0 0.7  0"
+            values="1 1 0 0  0
+                    1 1 0 0  0
+                    0 0 0 0  0
+                    0 0 0 0.6  0"
             result="glowColor"
           />
           <feMerge>
@@ -85,9 +84,9 @@ const ReactIcon = () => {
           <feColorMatrix
             in="blur"
             type="matrix"
-            values="0 0 0 0  0
-                    0 0 0 0  1
-                    0 0 0 0  1
+            values="1 1 0 0  0
+                    1 1 0 0  0
+                    0 0 0 0  0
                     0 0 0 1  0"
             result="glowColor"
           />
@@ -100,9 +99,7 @@ const ReactIcon = () => {
         </filter>
       </defs>
     </svg>
-
   );
 };
 
-export default ReactIcon;
-
+export default JavascriptLogoGlow;
